@@ -1,0 +1,47 @@
+
+
+<nav class="py-4">
+    <div class="row container-fluid">
+        <div class="col-2 text-white">
+            <h2 class="logo"><a routerLink="home">ELGWILE</a></h2>
+        </div>
+        <div class="col-8">
+            <i  (click)="openMenu()" id="menuIcon" class="fa-solid fa-bars text-white open"></i>
+
+            <ul class="links">
+
+                <i  (click)="closeMenu()" class="fa-solid fa-times text-white close"></i>
+                <li>
+                    <a routerLink="home">HOME</a>
+                </li>
+
+                <li>
+                    <a routerLink="tv">TV</a>
+                </li>
+
+                <li>
+                    <a routerLink="movies">MOVIES</a>
+                </li>
+
+                <li>
+                    <a routerLink="people">PEOPLE</a>
+                </li>
+
+                <li>
+                    <a routerLink="about">ABOUT</a>
+                </li>
+
+                <li>
+                    <a routerLink="contacts">CONTACTS</a>
+                </li>
+                <div class="icons col-2 text-white d-flex justify-content-around">
+                    <i class="fab fa-facebook-f    "></i>
+                    <i class="fab fa-twitter    "></i>
+                    <i class="fab fa-instagram    "></i>
+                    <i class="fab fa-youtube    "></i>
+                </div>
+            </ul>
+        </div>
+        
+    </div>
+</nav>

@@ -1,0 +1,40 @@
+
+<div class="container">
+
+
+    <div class="w-50 mx-auto my-3">
+        <input  [(ngModel)]="term"  type="text"class="form-control">
+        <span class="text-white">{{term}}</span>
+    </div>
+
+
+    <div class="row">
+        <div class="col-4 py5">
+            <div class="brdr w-25"> </div>
+            <h2 class="text-white py-3">Popular Movies <br> Right Now</h2>
+            <p class="text-muted">Most trending movies this day</p>
+            <div class="brdr w-100"></div>
+           
+        </div>
+        <div *ngFor="let movie of allTrending|search:term| paginate: { itemsPerPage: 6, currentPage: p, totalItems: total } let i = index" class="col-md-2 my-2">
+            <div class="movie position-relative">
+                <a [routerLink]='["/movie-details",i]'>
+                  
+                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+                    <h5 class="text-white py-3">{{movie.name ==undefined ? movie.title : movie.name}}</h5>
+                    <p class="text-white">{{movie.overview|seeMore:60}}...</p>
+                    <div class="vote">{{movie.vote_average}}</div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <pagination-controls class="w-50 mx-auto text-center my-5 text-success" (pageChange)="pageChangeEvent($event)"></pagination-controls>
+
+
+
+</div>
+
+

@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+$fontFamily:'Montserrat', sans-serif;
+$borderHeight:1px;
+$mainWidth:400px;
+$fontSize:16px;
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransperant:rgba(36,186,239,0.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$secondFontColor:#949cb0;
+
+
+
+body
+{
+    background-color: $bgColor;
+    font-family: $fontFamily;
+}
+
+a{
+    text-decoration: none;
+    color: $fontColor;
+}
+
+a:hover{
+    text-decoration: none;
+    color: $fontColor;
+}
+
+
+.vote
+{
+    background-color: $lightBgColor;
+    color: $fontColor;
+    font-weight: 600;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.brdr
+{
+    height: $borderHeight;
+    background-color: $borderColor;
+}

@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 py5">
+            <div class="brdr w-25"> </div>
+            <h2 class="text-white py-3">Popular Movies <br> Right Now</h2>
+            <p class="text-muted">Most trending movies this day</p>
+            <div class="brdr w-100"></div>
+           
+        </div>
+        <div *ngFor="let movie of allTrending" class="col-md-2 my-2">
+            <div class="movie position-relative">
+                <img class="img-fluid" src="https://image.tmdb.org/t/p/w500{{movie.profile_path}}">
+                <h6 class="text-white py-3">{{movie.name ==undefined ? movie.title : movie.name}}</h6>
+                <div class="vote">{{movie.popularity}}</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
